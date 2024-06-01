@@ -36,7 +36,7 @@ function show(){
         {
 
             document.getElementsByClassName(String(x))[0].style.backgroundImage=`url(${arr[x]})`;
-            document.getElementsByClassName(String(x))[0].style.backgroundSize = '200px 200px';
+            document.getElementsByClassName(String(x))[0].style.backgroundSize = '120px 120px';
         }
     let time=5;
     tgtimer=document.getElementsByClassName("timetg")[0];
@@ -99,7 +99,7 @@ function eventMaker(className){
     var div=document.getElementsByClassName(className)[0];
     div.addEventListener("click",function(){
         div.style.backgroundImage=`url(${arr[className]})`;
-        div.style.backgroundSize = '200px 200px';
+        div.style.backgroundSize = '120px 120px';
         classesNames.push(className)
         eventsImages.push(div.style.backgroundImage)
         if(eventsImages.length==2){
