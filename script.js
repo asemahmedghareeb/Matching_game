@@ -7,10 +7,11 @@ done=[];
 eventsImages=[];
 classesNames=[];
 var x=true;
-arr=[null,  "1.png","2.jpg","3.png","4.png",
-            "5.png","6.jpg","7.png","8.png",
-            "1.png","2.jpg","3.png","4.png",
-            "5.png","6.jpg","7.png","8.png"];
+arr=[null,  "img1","img2","img3","img4",
+            "img5","img6","img7","img8",
+            "img1","img2","img3","img4",
+            "img5","img6","img7","img8"];
+        
 function changeRandomely(){
     var pos1=0; var pos2=0;
     for(var x=0;x<11;x++){
@@ -32,7 +33,11 @@ function clear(){
 }
 function show(){
     for(let x=1;x<=16;x++)
-        document.getElementsByClassName(String(x))[0].style.backgroundImage=`url(${arr[x]})`;
+        {
+
+            document.getElementsByClassName(String(x))[0].style.backgroundImage=`url(${arr[x]})`;
+            document.getElementsByClassName(String(x))[0].style.backgroundSize = '200px 200px';
+        }
     let time=5;
     tgtimer=document.getElementsByClassName("timetg")[0];
     let t=setInterval(function(){
@@ -46,6 +51,7 @@ function show(){
     },1000)
 }
 function time(){
+    
     if(rounds==10){
         return true ;
     }
@@ -89,9 +95,11 @@ function isInDone(cls){
     return false;
 }
 function eventMaker(className){
+
     var div=document.getElementsByClassName(className)[0];
     div.addEventListener("click",function(){
         div.style.backgroundImage=`url(${arr[className]})`;
+        div.style.backgroundSize = '200px 200px';
         classesNames.push(className)
         eventsImages.push(div.style.backgroundImage)
         if(eventsImages.length==2){
@@ -129,9 +137,15 @@ function eventMaker(className){
             })
         }
 function addingevents(){
-    for(let i=1;i<=16;i++)
+    for(let i=1;i<=16;i++){
+
         eventMaker(String(i))
+        
+       
+    }
+        
 }
 changeRandomely();
+
 addingevents();
 time();
