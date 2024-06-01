@@ -5,15 +5,15 @@ h2{
     display: inline-block;
 }
 .container{
-    width: 500px;
-    height: 500px;
+    width: 375px;
+    height: 440px;
     display: flex;
     flex-wrap: wrap;
     background-color:white;
     margin: auto;
 }
 .box{
-    height: 120px;
+    height: 115px;
     width: 120px;
     margin: auto;
     border:solid black 2px;
@@ -41,4 +41,7 @@ img {
     width: 120px;
     height: 120px;
   }
+  
+
+
   

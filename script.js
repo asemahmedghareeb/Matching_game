@@ -7,16 +7,15 @@ done=[];
 eventsImages=[];
 classesNames=[];
 var x=true;
-arr=[null,  "img1","img2","img3","img4",
-            "img5","img6","img7","img8",
-            "img1","img2","img3","img4",
+arr=[null,"img3","img4",
+            "img5","img6","img7","img8","img3","img4",
             "img5","img6","img7","img8"];
         
 function changeRandomely(){
     var pos1=0; var pos2=0;
     for(var x=0;x<11;x++){
-        pos1=Math.floor(Math.random()*16)+1
-        pos2=Math.floor(Math.random()*16)+1
+        pos1=Math.floor(Math.random()*12)+1
+        pos2=Math.floor(Math.random()*12)+1
         var temp=arr[pos1];
         arr[pos1]=arr[pos2];
         arr[pos2]=temp;
@@ -28,11 +27,11 @@ function clearDone(){
         done.pop();
 }
 function clear(){
-    for(let x=1;x<=16;x++)
+    for(let x=1;x<=12;x++)
         document.getElementsByClassName(String(x))[0].style="background-image:none";
 }
 function show(){
-    for(let x=1;x<=16;x++)
+    for(let x=1;x<=12;x++)
         {
 
             document.getElementsByClassName(String(x))[0].style.backgroundImage=`url(${arr[x]})`;
@@ -137,15 +136,12 @@ function eventMaker(className){
             })
         }
 function addingevents(){
-    for(let i=1;i<=16;i++){
+    for(let i=1;i<=12;i++){
 
         eventMaker(String(i))
-        
-       
     }
         
 }
 changeRandomely();
-
 addingevents();
 time();
