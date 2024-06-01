@@ -62,7 +62,7 @@ function time(){
         if(timecounter<=30&&timecounter>=0){
             timer.textContent=String(timecounter);
         }
-        if(score==8){
+        if(score==6){
             ++rounds;++winsnum;
             document.getElementsByClassName('rounds')[0].textContent=rounds;
             clearInterval(setIervaL);
